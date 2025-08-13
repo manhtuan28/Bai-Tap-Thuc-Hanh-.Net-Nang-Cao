@@ -23,6 +23,30 @@ namespace XepLoaiHocTap
             double hkii = double.Parse(txtDiemHKII.Text);
             double resultDiem = (hki + 2 * hkii) / 3;
 
+            if (resultDiem >= 9.0)
+            {
+                txtXepLoai.Text = "Xuất sắc";
+            }
+            else if (resultDiem >= 8.0)
+            {
+                txtXepLoai.Text = "Giỏi";
+            }
+            else if (resultDiem >= 6.5)
+            {
+                txtXepLoai.Text = "Khá";
+            }
+            else if (resultDiem >= 5.0)
+            {
+                txtXepLoai.Text = "Trung bình";
+            }
+            else if (resultDiem >= 3.5)
+            {
+                txtXepLoai.Text = "Yếu";
+            }
+            else
+            {
+                txtXepLoai.Text = "Kém";
+            }
         }
 
         private void btnLamLai_Click(object sender, EventArgs e)
