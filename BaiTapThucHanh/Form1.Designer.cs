@@ -91,6 +91,7 @@
             this.txtBanKinh.Name = "txtBanKinh";
             this.txtBanKinh.Size = new System.Drawing.Size(333, 27);
             this.txtBanKinh.TabIndex = 4;
+            this.txtBanKinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBanKinh_KeyPress);
             // 
             // txtChuVi
             // 
@@ -177,4 +178,3 @@
         private System.Windows.Forms.Button btnLamLai;
     }
 }
-

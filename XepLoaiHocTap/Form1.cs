@@ -64,6 +64,57 @@ namespace XepLoaiHocTap
                 txtXepLoai.Clear();
             }
         }
+
+        private void txtDiemHKI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '.' && (sender as TextBox).Text.Contains(".")) 
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDiemHKII_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if(e.KeyChar == '.' && (sender as TextBox).Text.Contains("."))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDiemHKI_TextChanged(object sender, EventArgs e)
+        {
+            if(double.TryParse(txtDiemHKI.Text, out double hki))
+            {
+                if(hki > 10)
+                {
+                    MessageBox.Show("Vui lòng nhập điểm học kỳ 1 theo thang điểm 10", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtDiemHKI.Clear();
+                }
+            }
+        }
+
+        private void txtDiemHKII_TextChanged(object sender, EventArgs e)
+        {
+            if(double.TryParse(txtDiemHKII.Text, out double hkii))
+            {
+                if(hkii > 10)
+                {
+                    MessageBox.Show("Vui lòng nhập điểm học kỳ 2 theo thang điểm 10", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtDiemHKII.Clear();
+                }
+            }
+        }
     }
 }
 // Code by Tuancute

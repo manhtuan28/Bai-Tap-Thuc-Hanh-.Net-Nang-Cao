@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BaiTapThucHanh
+namespace TinhTienDien
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace BaiTapThucHanh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BT1());
+            Application.Run(new frmMain());
         }
     }
 }

@@ -67,6 +67,8 @@
             this.txtDiemHKI.Name = "txtDiemHKI";
             this.txtDiemHKI.Size = new System.Drawing.Size(179, 20);
             this.txtDiemHKI.TabIndex = 0;
+            this.txtDiemHKI.TextChanged += new System.EventHandler(this.txtDiemHKI_TextChanged);
+            this.txtDiemHKI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiemHKI_KeyPress);
             // 
             // lblDiemHKII
             // 
@@ -84,6 +86,8 @@
             this.txtDiemHKII.Name = "txtDiemHKII";
             this.txtDiemHKII.Size = new System.Drawing.Size(179, 20);
             this.txtDiemHKII.TabIndex = 1;
+            this.txtDiemHKII.TextChanged += new System.EventHandler(this.txtDiemHKII_TextChanged);
+            this.txtDiemHKII.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiemHKII_KeyPress);
             // 
             // lblXepLoai
             // 

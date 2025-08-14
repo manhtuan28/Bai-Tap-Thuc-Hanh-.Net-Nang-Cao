@@ -99,6 +99,7 @@
             this.txtChieuDai.Name = "txtChieuDai";
             this.txtChieuDai.Size = new System.Drawing.Size(333, 27);
             this.txtChieuDai.TabIndex = 13;
+            this.txtChieuDai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChieuDai_KeyPress);
             // 
             // lblDienTich
             // 
@@ -151,6 +152,7 @@
             this.txtChieuRong.Name = "txtChieuRong";
             this.txtChieuRong.Size = new System.Drawing.Size(333, 27);
             this.txtChieuRong.TabIndex = 19;
+            this.txtChieuRong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChieuRong_KeyPress);
             // 
             // lblChieuRong
             // 
