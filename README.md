@@ -5,7 +5,7 @@
 ![Language C#](https://img.shields.io/badge/Language-C%23-blueviolet?style=for-the-badge&logo=c-sharp)
 ![IDE Visual Studio](https://img.shields.io/badge/IDE-Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio)
 ![Status In Progress](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
-![Exercises Done](https://img.shields.io/badge/Exercises%20Done-5-brightgreen?style=for-the-badge)
+![Exercises Done](https://img.shields.io/badge/Exercises%20Done-6-brightgreen?style=for-the-badge)
 
 ---
 
