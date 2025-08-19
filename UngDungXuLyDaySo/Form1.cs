@@ -12,6 +12,7 @@ namespace UngDungXuLyDaySo
 {
     public partial class frmMain : Form
     {
+        private readonly Random _rnd = new Random();
         public frmMain()
         {
             InitializeComponent();
@@ -19,12 +20,20 @@ namespace UngDungXuLyDaySo
 
         private void btnNhapSo_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtNhapSoNguyen.Text.Trim(), out int n))
+            if (!int.TryParse(txtNhapSoNguyen.Text.Trim(), out int soLuong) || soLuong <= 0)
             {
-                MessageBox.Show("Vui lòng nhập số nguyên hợp lệ.", "Thông báo");
+                MessageBox.Show("Nhập vào một số nguyên dương!");
                 return;
             }
-            lsbDaySo.Items.Add(n);
+
+            lsbDaySo.Items.Clear();
+
+            for (int i = 0; i < soLuong; i++)
+            {
+                int val = _rnd.Next(1, 101);
+                lsbDaySo.Items.Add(val);
+            }
+
             txtNhapSoNguyen.Clear();
             txtNhapSoNguyen.Focus();
         }
