@@ -11,7 +11,7 @@ namespace TinhTienHocTrungTam
         {
             InitializeComponent();
             dateTimeNgayDangKy.Format = DateTimePickerFormat.Custom; // ChatGPT
-            dateTimeNgayDangKy.CustomFormat = "dddd, dd/MM/yyyy"; // ChatGPT
+            dateTimeNgayDangKy.CustomFormat = "dd/MM/yyyy"; // ChatGPT
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -40,11 +40,17 @@ namespace TinhTienHocTrungTam
                 ckbTinHocB.Checked = false;
                 txtHoTen.Clear();
                 txtTongTien.Clear();
+                txtThongTin.Clear();
             }
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
+            string maHoVien = cbbMaHocVien.Text.Trim();
+            string hoTen = txtHoTen.Text.Trim();
+            string gioiTinh = rdbtnNam.Checked ? "Nam" : "Nữ";
+            string ngayDK = dateTimeNgayDangKy.Value.ToString("dd/MM/yyyy");
+
             int s = 0;
 
             if (ckbTinHocA.Checked)
@@ -56,6 +62,12 @@ namespace TinhTienHocTrungTam
             if (ckbTiengAnhB.Checked) 
                 s += int.Parse(lblTiengAnhB.Text.Split('.')[0]);
             this.txtTongTien.Text = s + ".000 đồng";
+
+            txtThongTin.Text =
+                "Mã học viên: " + maHoVien + Environment.NewLine +
+                "Họ Tên: " + hoTen + Environment.NewLine +
+                "Giới Tính: " + gioiTinh + Environment.NewLine +
+                "Ngày đăng ký: " + ngayDK;
         }
     }
 }

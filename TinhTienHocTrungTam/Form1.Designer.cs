@@ -40,20 +40,23 @@
             this.lblNgayDangKy = new System.Windows.Forms.Label();
             this.dateTimeNgayDangKy = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ckbTinHocA = new System.Windows.Forms.CheckBox();
-            this.ckbTinHocB = new System.Windows.Forms.CheckBox();
-            this.ckbTiengAnhA = new System.Windows.Forms.CheckBox();
-            this.ckbTiengAnhB = new System.Windows.Forms.CheckBox();
-            this.lblTinhHocA = new System.Windows.Forms.Label();
-            this.lblTinhHocB = new System.Windows.Forms.Label();
-            this.lblTiengAnhA = new System.Windows.Forms.Label();
-            this.lblTiengAnhB = new System.Windows.Forms.Label();
-            this.lblTongTien = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.lblTiengAnhB = new System.Windows.Forms.Label();
+            this.lblTiengAnhA = new System.Windows.Forms.Label();
+            this.lblTinhHocB = new System.Windows.Forms.Label();
+            this.lblTinhHocA = new System.Windows.Forms.Label();
+            this.ckbTiengAnhB = new System.Windows.Forms.CheckBox();
+            this.ckbTiengAnhA = new System.Windows.Forms.CheckBox();
+            this.ckbTinHocB = new System.Windows.Forms.CheckBox();
+            this.ckbTinHocA = new System.Windows.Forms.CheckBox();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.btnTinhTien = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtThongTin = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitile
@@ -63,7 +66,7 @@
             this.lblTitile.ForeColor = System.Drawing.Color.Fuchsia;
             this.lblTitile.Location = new System.Drawing.Point(0, 0);
             this.lblTitile.Name = "lblTitile";
-            this.lblTitile.Size = new System.Drawing.Size(532, 77);
+            this.lblTitile.Size = new System.Drawing.Size(897, 77);
             this.lblTitile.TabIndex = 6;
             this.lblTitile.Text = "TÍNH TIỀN HỌC TRUNG TÂM";
             this.lblTitile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,6 +83,7 @@
             // 
             // cbbMaHocVien
             // 
+            this.cbbMaHocVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaHocVien.FormattingEnabled = true;
             this.cbbMaHocVien.Items.AddRange(new object[] {
             "ABC123",
@@ -90,15 +94,14 @@
             "BCD789"});
             this.cbbMaHocVien.Location = new System.Drawing.Point(149, 95);
             this.cbbMaHocVien.Name = "cbbMaHocVien";
-            this.cbbMaHocVien.Size = new System.Drawing.Size(173, 21);
+            this.cbbMaHocVien.Size = new System.Drawing.Size(527, 21);
             this.cbbMaHocVien.TabIndex = 9;
-            this.cbbMaHocVien.Text = "Chọn mã học viên";
             // 
             // lblGioiTinh
             // 
             this.lblGioiTinh.AutoSize = true;
             this.lblGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGioiTinh.Location = new System.Drawing.Point(328, 98);
+            this.lblGioiTinh.Location = new System.Drawing.Point(682, 96);
             this.lblGioiTinh.Name = "lblGioiTinh";
             this.lblGioiTinh.Size = new System.Drawing.Size(76, 18);
             this.lblGioiTinh.TabIndex = 1;
@@ -108,7 +111,7 @@
             // 
             this.rdbtnNam.AutoSize = true;
             this.rdbtnNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnNam.Location = new System.Drawing.Point(410, 98);
+            this.rdbtnNam.Location = new System.Drawing.Point(764, 96);
             this.rdbtnNam.Name = "rdbtnNam";
             this.rdbtnNam.Size = new System.Drawing.Size(54, 20);
             this.rdbtnNam.TabIndex = 2;
@@ -120,7 +123,7 @@
             // 
             this.rdbtnNu.AutoSize = true;
             this.rdbtnNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtnNu.Location = new System.Drawing.Point(470, 98);
+            this.rdbtnNu.Location = new System.Drawing.Point(824, 96);
             this.rdbtnNu.Name = "rdbtnNu";
             this.rdbtnNu.Size = new System.Drawing.Size(42, 20);
             this.rdbtnNu.TabIndex = 4;
@@ -142,7 +145,7 @@
             // 
             this.txtHoTen.Location = new System.Drawing.Point(149, 137);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(356, 20);
+            this.txtHoTen.Size = new System.Drawing.Size(723, 20);
             this.txtHoTen.TabIndex = 3;
             // 
             // lblNgayDangKy
@@ -159,7 +162,7 @@
             // 
             this.dateTimeNgayDangKy.Location = new System.Drawing.Point(149, 181);
             this.dateTimeNgayDangKy.Name = "dateTimeNgayDangKy";
-            this.dateTimeNgayDangKy.Size = new System.Drawing.Size(356, 20);
+            this.dateTimeNgayDangKy.Size = new System.Drawing.Size(723, 20);
             this.dateTimeNgayDangKy.TabIndex = 4;
             // 
             // groupBox1
@@ -180,38 +183,55 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // ckbTinHocA
+            // txtTongTien
             // 
-            this.ckbTinHocA.AutoSize = true;
-            this.ckbTinHocA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTinHocA.Location = new System.Drawing.Point(20, 19);
-            this.ckbTinHocA.Name = "ckbTinHocA";
-            this.ckbTinHocA.Size = new System.Drawing.Size(82, 20);
-            this.ckbTinHocA.TabIndex = 1;
-            this.ckbTinHocA.Text = "Tín học A";
-            this.ckbTinHocA.UseVisualStyleBackColor = true;
+            this.txtTongTien.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.Location = new System.Drawing.Point(155, 159);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(276, 22);
+            this.txtTongTien.TabIndex = 2;
             // 
-            // ckbTinHocB
+            // lblTiengAnhB
             // 
-            this.ckbTinHocB.AutoSize = true;
-            this.ckbTinHocB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTinHocB.Location = new System.Drawing.Point(20, 53);
-            this.ckbTinHocB.Name = "ckbTinHocB";
-            this.ckbTinHocB.Size = new System.Drawing.Size(82, 20);
-            this.ckbTinHocB.TabIndex = 1;
-            this.ckbTinHocB.Text = "Tín học B";
-            this.ckbTinHocB.UseVisualStyleBackColor = true;
+            this.lblTiengAnhB.AutoSize = true;
+            this.lblTiengAnhB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiengAnhB.Location = new System.Drawing.Point(334, 126);
+            this.lblTiengAnhB.Name = "lblTiengAnhB";
+            this.lblTiengAnhB.Size = new System.Drawing.Size(97, 18);
+            this.lblTiengAnhB.TabIndex = 1;
+            this.lblTiengAnhB.Text = "600.000 đồng";
             // 
-            // ckbTiengAnhA
+            // lblTiengAnhA
             // 
-            this.ckbTiengAnhA.AutoSize = true;
-            this.ckbTiengAnhA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTiengAnhA.Location = new System.Drawing.Point(19, 88);
-            this.ckbTiengAnhA.Name = "ckbTiengAnhA";
-            this.ckbTiengAnhA.Size = new System.Drawing.Size(99, 20);
-            this.ckbTiengAnhA.TabIndex = 2;
-            this.ckbTiengAnhA.Text = "Tiếng Anh A";
-            this.ckbTiengAnhA.UseVisualStyleBackColor = true;
+            this.lblTiengAnhA.AutoSize = true;
+            this.lblTiengAnhA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiengAnhA.Location = new System.Drawing.Point(334, 92);
+            this.lblTiengAnhA.Name = "lblTiengAnhA";
+            this.lblTiengAnhA.Size = new System.Drawing.Size(97, 18);
+            this.lblTiengAnhA.TabIndex = 1;
+            this.lblTiengAnhA.Text = "400.000 đồng";
+            // 
+            // lblTinhHocB
+            // 
+            this.lblTinhHocB.AutoSize = true;
+            this.lblTinhHocB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTinhHocB.Location = new System.Drawing.Point(334, 55);
+            this.lblTinhHocB.Name = "lblTinhHocB";
+            this.lblTinhHocB.Size = new System.Drawing.Size(97, 18);
+            this.lblTinhHocB.TabIndex = 1;
+            this.lblTinhHocB.Text = "500.000 đồng";
+            // 
+            // lblTinhHocA
+            // 
+            this.lblTinhHocA.AutoSize = true;
+            this.lblTinhHocA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTinhHocA.Location = new System.Drawing.Point(334, 21);
+            this.lblTinhHocA.Name = "lblTinhHocA";
+            this.lblTinhHocA.Size = new System.Drawing.Size(97, 18);
+            this.lblTinhHocA.TabIndex = 1;
+            this.lblTinhHocA.Text = "300.000 đồng";
             // 
             // ckbTiengAnhB
             // 
@@ -224,45 +244,38 @@
             this.ckbTiengAnhB.Text = "Tiếng Anh B";
             this.ckbTiengAnhB.UseVisualStyleBackColor = true;
             // 
-            // lblTinhHocA
+            // ckbTiengAnhA
             // 
-            this.lblTinhHocA.AutoSize = true;
-            this.lblTinhHocA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTinhHocA.Location = new System.Drawing.Point(334, 21);
-            this.lblTinhHocA.Name = "lblTinhHocA";
-            this.lblTinhHocA.Size = new System.Drawing.Size(97, 18);
-            this.lblTinhHocA.TabIndex = 1;
-            this.lblTinhHocA.Text = "300.000 đồng";
+            this.ckbTiengAnhA.AutoSize = true;
+            this.ckbTiengAnhA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTiengAnhA.Location = new System.Drawing.Point(19, 88);
+            this.ckbTiengAnhA.Name = "ckbTiengAnhA";
+            this.ckbTiengAnhA.Size = new System.Drawing.Size(99, 20);
+            this.ckbTiengAnhA.TabIndex = 2;
+            this.ckbTiengAnhA.Text = "Tiếng Anh A";
+            this.ckbTiengAnhA.UseVisualStyleBackColor = true;
             // 
-            // lblTinhHocB
+            // ckbTinHocB
             // 
-            this.lblTinhHocB.AutoSize = true;
-            this.lblTinhHocB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTinhHocB.Location = new System.Drawing.Point(334, 55);
-            this.lblTinhHocB.Name = "lblTinhHocB";
-            this.lblTinhHocB.Size = new System.Drawing.Size(97, 18);
-            this.lblTinhHocB.TabIndex = 1;
-            this.lblTinhHocB.Text = "500.000 đồng";
+            this.ckbTinHocB.AutoSize = true;
+            this.ckbTinHocB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTinHocB.Location = new System.Drawing.Point(20, 53);
+            this.ckbTinHocB.Name = "ckbTinHocB";
+            this.ckbTinHocB.Size = new System.Drawing.Size(82, 20);
+            this.ckbTinHocB.TabIndex = 1;
+            this.ckbTinHocB.Text = "Tín học B";
+            this.ckbTinHocB.UseVisualStyleBackColor = true;
             // 
-            // lblTiengAnhA
+            // ckbTinHocA
             // 
-            this.lblTiengAnhA.AutoSize = true;
-            this.lblTiengAnhA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiengAnhA.Location = new System.Drawing.Point(334, 92);
-            this.lblTiengAnhA.Name = "lblTiengAnhA";
-            this.lblTiengAnhA.Size = new System.Drawing.Size(97, 18);
-            this.lblTiengAnhA.TabIndex = 1;
-            this.lblTiengAnhA.Text = "400.000 đồng";
-            // 
-            // lblTiengAnhB
-            // 
-            this.lblTiengAnhB.AutoSize = true;
-            this.lblTiengAnhB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiengAnhB.Location = new System.Drawing.Point(334, 126);
-            this.lblTiengAnhB.Name = "lblTiengAnhB";
-            this.lblTiengAnhB.Size = new System.Drawing.Size(97, 18);
-            this.lblTiengAnhB.TabIndex = 1;
-            this.lblTiengAnhB.Text = "600.000 đồng";
+            this.ckbTinHocA.AutoSize = true;
+            this.ckbTinHocA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTinHocA.Location = new System.Drawing.Point(20, 19);
+            this.ckbTinHocA.Name = "ckbTinHocA";
+            this.ckbTinHocA.Size = new System.Drawing.Size(82, 20);
+            this.ckbTinHocA.TabIndex = 1;
+            this.ckbTinHocA.Text = "Tín học A";
+            this.ckbTinHocA.UseVisualStyleBackColor = true;
             // 
             // lblTongTien
             // 
@@ -274,21 +287,12 @@
             this.lblTongTien.TabIndex = 1;
             this.lblTongTien.Text = "Tổng Tiền";
             // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtTongTien.Location = new System.Drawing.Point(155, 159);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(276, 20);
-            this.txtTongTien.TabIndex = 2;
-            // 
             // btnTinhTien
             // 
             this.btnTinhTien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTinhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhTien.ForeColor = System.Drawing.Color.Blue;
-            this.btnTinhTien.Location = new System.Drawing.Point(33, 448);
+            this.btnTinhTien.Location = new System.Drawing.Point(71, 440);
             this.btnTinhTien.Name = "btnTinhTien";
             this.btnTinhTien.Size = new System.Drawing.Size(133, 43);
             this.btnTinhTien.TabIndex = 5;
@@ -301,11 +305,11 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(204, 448);
+            this.btnCancel.Location = new System.Drawing.Point(406, 440);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(133, 43);
             this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "❌ Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -314,7 +318,7 @@
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Blue;
-            this.btnExit.Location = new System.Drawing.Point(372, 448);
+            this.btnExit.Location = new System.Drawing.Point(700, 440);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(133, 43);
             this.btnExit.TabIndex = 7;
@@ -322,11 +326,33 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtThongTin);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(511, 230);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(361, 192);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin";
+            // 
+            // txtThongTin
+            // 
+            this.txtThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThongTin.Location = new System.Drawing.Point(19, 20);
+            this.txtThongTin.Multiline = true;
+            this.txtThongTin.Name = "txtThongTin";
+            this.txtThongTin.ReadOnly = true;
+            this.txtThongTin.Size = new System.Drawing.Size(336, 159);
+            this.txtThongTin.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 507);
+            this.ClientSize = new System.Drawing.Size(897, 514);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnTinhTien);
@@ -344,9 +370,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tính tiền học trung tâm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,6 +407,8 @@
         private System.Windows.Forms.Button btnTinhTien;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtThongTin;
     }
 }
 
