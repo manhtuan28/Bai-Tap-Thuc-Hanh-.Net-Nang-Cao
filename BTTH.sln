@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinhTienHocTrungTam", "Tinh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanhMucSinhVien", "DanhMucSinhVien\DanhMucSinhVien.csproj", "{15B1FDD9-1405-445A-B52D-5AE18E7F0CBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UngDungXuLyDaySo", "UngDungXuLyDaySo\UngDungXuLyDaySo.csproj", "{C01AD52E-CAB5-4F6D-BF4F-E8848D27EC68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoaDonBanHang", "HoaDonBanHang\HoaDonBanHang.csproj", "{7E363F5B-D650-466F-8956-D3981CAE4004}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{15B1FDD9-1405-445A-B52D-5AE18E7F0CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B1FDD9-1405-445A-B52D-5AE18E7F0CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B1FDD9-1405-445A-B52D-5AE18E7F0CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C01AD52E-CAB5-4F6D-BF4F-E8848D27EC68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C01AD52E-CAB5-4F6D-BF4F-E8848D27EC68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C01AD52E-CAB5-4F6D-BF4F-E8848D27EC68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C01AD52E-CAB5-4F6D-BF4F-E8848D27EC68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E363F5B-D650-466F-8956-D3981CAE4004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E363F5B-D650-466F-8956-D3981CAE4004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E363F5B-D650-466F-8956-D3981CAE4004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E363F5B-D650-466F-8956-D3981CAE4004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
