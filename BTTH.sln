@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuuDocVanBan", "LuuDocVanBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TH2-BT3", "TH2-BT3\TH2-BT3.csproj", "{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TH2-BT5", "TH2-BT5\TH2-BT5.csproj", "{529261DA-9A8B-4119-9B4B-E5B90687FCA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529261DA-9A8B-4119-9B4B-E5B90687FCA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529261DA-9A8B-4119-9B4B-E5B90687FCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529261DA-9A8B-4119-9B4B-E5B90687FCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529261DA-9A8B-4119-9B4B-E5B90687FCA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
