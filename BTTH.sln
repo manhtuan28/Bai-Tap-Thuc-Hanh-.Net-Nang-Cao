@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDI", "MDI\MDI.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuuDocVanBan", "LuuDocVanBan\LuuDocVanBan.csproj", "{32379BDE-E2AA-4554-824F-BD2D62C998F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TH2-BT3", "TH2-BT3\TH2-BT3.csproj", "{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{32379BDE-E2AA-4554-824F-BD2D62C998F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32379BDE-E2AA-4554-824F-BD2D62C998F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32379BDE-E2AA-4554-824F-BD2D62C998F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2B7DE6-527A-46D9-953E-1FC855DB2AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
