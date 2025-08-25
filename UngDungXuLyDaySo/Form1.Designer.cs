@@ -92,6 +92,7 @@
             this.txtNhapSoNguyen.Name = "txtNhapSoNguyen";
             this.txtNhapSoNguyen.Size = new System.Drawing.Size(227, 22);
             this.txtNhapSoNguyen.TabIndex = 0;
+            this.txtNhapSoNguyen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNhapSoNguyen_KeyPress);
             // 
             // splitContainer1
             // 

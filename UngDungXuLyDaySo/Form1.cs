@@ -22,7 +22,7 @@ namespace UngDungXuLyDaySo
         {
             if (!int.TryParse(txtNhapSoNguyen.Text.Trim(), out int soLuong) || soLuong <= 0)
             {
-                MessageBox.Show("Nhập vào một số nguyên dương!");
+                MessageBox.Show("Nhập vào một số nguyên dương!", "Thông báo");
                 return;
             }
 
@@ -106,6 +106,14 @@ namespace UngDungXuLyDaySo
             if (thoat == DialogResult.Yes) 
             { 
                 Application.Exit();
+            }
+        }
+
+        private void txtNhapSoNguyen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
