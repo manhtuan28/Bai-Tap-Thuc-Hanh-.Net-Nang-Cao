@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BTH3-BT1")]
+[assembly: AssemblyTitle("TH3-BT1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BTH3-BT1")]
+[assembly: AssemblyProduct("TH3-BT1")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("727a8e3d-e192-48af-ad0d-d3c985686581")]
+[assembly: Guid("daf08077-2b58-470f-a97b-263ef706a4ec")]
 
 // Version information for an assembly consists of the following four values:
 //

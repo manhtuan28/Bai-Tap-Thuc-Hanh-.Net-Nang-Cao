@@ -6,45 +6,55 @@ namespace BTH3_BT1
 {
     public partial class frmMain : Form
     {
-        const double EPS = 1e-12;
+        public frmMain()
+        {
+            InitializeComponent();
+        }
 
-        public frmMain() => InitializeComponent();
+        private void btnLamLai_Click(object sender, EventArgs e)
+        {
+            var reset = MessageBox.Show("Bạn có chắc muốn làm lại?", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-        static double Parse(string s, out bool ok)
+            if (reset == DialogResult.Yes)
+            {
+                txtA.Clear();
+                txtB.Clear();
+                txtKetQua.Clear();
+                txtA.Focus();
+            }
+        }
+
+        private static bool TryParseNumber(string s, out double v)
         {
             s = (s ?? "").Trim().Replace(',', '.');
-            ok = double.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out double v);
-            return v;
+            return double.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out v);
         }
 
-        static string F(double v) => v.ToString("0.######", new CultureInfo("vi-VN"));
-
-        void btnGiaiPT_Click(object sender, EventArgs e)
+        private void btnGiaiPhuongTrinh_Click(object sender, EventArgs e)
         {
-            double a = Parse(txtA.Text, out bool okA);
-            double b = Parse(txtB.Text, out bool okB);
-            if (!okA || !okB)
+            if (!TryParseNumber(txtA.Text, out double a) ||
+                !TryParseNumber(txtB.Text, out double b))
             {
-                MessageBox.Show("Nhập số hợp lệ cho a và b.", "Sai định dạng",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nhập số hợp lệ cho a và b.");
                 return;
             }
 
-            if (Math.Abs(a) <= EPS)
+            var pt = new PTB1(a, b);
+            var (status, x) = pt.Solve();
+
+            switch (status)
             {
-                txtNghiem.Text = Math.Abs(b) <= EPS ? "Vô số nghiệm." : "Vô nghiệm.";
-                return;
+                case PTB1Status.InfiniteSolutions:
+                    txtKetQua.Text = "Vô số nghiệm.";
+                    break;
+                case PTB1Status.NoSolution:
+                    txtKetQua.Text = "Vô nghiệm.";
+                    break;
+                case PTB1Status.OneSolution:
+                    txtKetQua.Text = "Phương trình có nghiệm: x = " + x.Value.ToString("0.######", new CultureInfo("vi-VN"));
+                    break;
             }
-
-            txtNghiem.Text = "Phương trình có nghiệm: x = " + F(-b / a);
-        }
-
-        void btnLamLai_Click(object sender, EventArgs e)
-        {
-            txtA.Clear();
-            txtB.Clear();
-            txtNghiem.Clear();
-            txtA.Focus();
         }
     }
 }
