@@ -39,6 +39,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnChia = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSoSanh2PhanSo = new Guna.UI2.WinForms.Guna2Button();
             this.btnLamLai = new Guna.UI2.WinForms.Guna2Button();
             this.btnTru = new Guna.UI2.WinForms.Guna2Button();
             this.btnCong = new Guna.UI2.WinForms.Guna2Button();
@@ -161,6 +162,7 @@
             // 
             this.guna2Panel2.Controls.Add(this.btnChia);
             this.guna2Panel2.Controls.Add(this.btnNhan);
+            this.guna2Panel2.Controls.Add(this.btnSoSanh2PhanSo);
             this.guna2Panel2.Controls.Add(this.btnLamLai);
             this.guna2Panel2.Controls.Add(this.btnTru);
             this.guna2Panel2.Controls.Add(this.btnCong);
@@ -208,6 +210,25 @@
             this.btnNhan.Text = "Nhân";
             this.btnNhan.Click += new System.EventHandler(this.btnNhan_Click);
             // 
+            // btnSoSanh2PhanSo
+            // 
+            this.btnSoSanh2PhanSo.Animated = true;
+            this.btnSoSanh2PhanSo.BorderRadius = 10;
+            this.btnSoSanh2PhanSo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSoSanh2PhanSo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSoSanh2PhanSo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSoSanh2PhanSo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSoSanh2PhanSo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSoSanh2PhanSo.FillColor = System.Drawing.Color.SaddleBrown;
+            this.btnSoSanh2PhanSo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSoSanh2PhanSo.ForeColor = System.Drawing.Color.White;
+            this.btnSoSanh2PhanSo.Location = new System.Drawing.Point(32, 44);
+            this.btnSoSanh2PhanSo.Name = "btnSoSanh2PhanSo";
+            this.btnSoSanh2PhanSo.Size = new System.Drawing.Size(230, 35);
+            this.btnSoSanh2PhanSo.TabIndex = 0;
+            this.btnSoSanh2PhanSo.Text = "So Sánh 2 phân số";
+            this.btnSoSanh2PhanSo.Click += new System.EventHandler(this.btnSoSanh2PhanSo_Click);
+            // 
             // btnLamLai
             // 
             this.btnLamLai.Animated = true;
@@ -220,9 +241,9 @@
             this.btnLamLai.FillColor = System.Drawing.Color.Red;
             this.btnLamLai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnLamLai.ForeColor = System.Drawing.Color.White;
-            this.btnLamLai.Location = new System.Drawing.Point(182, 44);
+            this.btnLamLai.Location = new System.Drawing.Point(268, 44);
             this.btnLamLai.Name = "btnLamLai";
-            this.btnLamLai.Size = new System.Drawing.Size(95, 35);
+            this.btnLamLai.Size = new System.Drawing.Size(162, 35);
             this.btnLamLai.TabIndex = 0;
             this.btnLamLai.Text = "Làm lại";
             this.btnLamLai.Click += new System.EventHandler(this.btnLamLai_Click);
@@ -322,6 +343,7 @@
         private Guna.UI2.WinForms.Guna2Button btnNhan;
         private Guna.UI2.WinForms.Guna2Button btnTru;
         private Guna.UI2.WinForms.Guna2Button btnLamLai;
+        private Guna.UI2.WinForms.Guna2Button btnSoSanh2PhanSo;
     }
 }
 

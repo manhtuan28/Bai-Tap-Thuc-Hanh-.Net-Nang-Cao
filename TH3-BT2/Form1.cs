@@ -16,7 +16,6 @@ namespace TH3_BT2
             txtPhanSo1.Clear();
             txtPhanSo2.Clear();
             txtKetQua.Text = "";
-            txtPhanSo1.Focus();
         }
 
         private void btnCong_Click(object sender, EventArgs e)
@@ -37,6 +36,29 @@ namespace TH3_BT2
         private void btnChia_Click(object sender, EventArgs e)
         {
             Tinh(PhanSo.Chia);
+        }
+
+        private void btnSoSanh2PhanSo_Click(object sender, EventArgs e)
+        {
+            PhanSo a, b;
+
+            if (!PhanSo.TryParse(txtPhanSo1.Text, out a))
+            {
+                MessageBox.Show("Phân số 1 không hợp lệ. Nhập dạng a/b hoặc số nguyên.", "Thông báo");
+                txtPhanSo1.Focus(); return;
+            }
+            if (!PhanSo.TryParse(txtPhanSo2.Text, out b))
+            {
+                MessageBox.Show("Phân số 2 không hợp lệ. Nhập dạng a/b hoặc số nguyên.", "Thông báo");
+                txtPhanSo2.Focus(); return;
+            }
+
+            int cmp = PhanSo.SoSanh(a, b);
+            string msg = (cmp == 0)
+                ? "Hai phân số BẰNG nhau"
+                : (cmp > 0 ? "Phân số 1 LỚN hơn phân số 2" : "Phân số 1 NHỎ hơn phân số 2");
+
+            MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Tinh(Func<PhanSo, PhanSo, PhanSo> phepToan)
@@ -65,7 +87,5 @@ namespace TH3_BT2
                 MessageBox.Show(ex.Message, "Lỗi");
             }
         }
-
-
     }
 }
