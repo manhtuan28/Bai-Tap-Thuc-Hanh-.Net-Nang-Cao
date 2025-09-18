@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QL_NHANVIENModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="chucvu">
+          <Key>
+            <PropertyRef Name="macv" />
+          </Key>
+          <Property Name="macv" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="tencv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hsphucap" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="nhanvien">
+          <Key>
+            <PropertyRef Name="manv" />
+          </Key>
+          <Property Name="manv" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="holot" Type="nvarchar" MaxLength="30" />
+          <Property Name="ten" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ngaysinh" Type="date" />
+          <Property Name="gioitinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="macv" Type="char" MaxLength="5" />
+          <Property Name="mapb" Type="char" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="phongban">
+          <Key>
+            <PropertyRef Name="mapb" />
+          </Key>
+          <Property Name="mapb" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="tenpb" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="quatrinhluong">
+          <Key>
+            <PropertyRef Name="manv" />
+            <PropertyRef Name="ngaybd" />
+          </Key>
+          <Property Name="manv" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ngaybd" Type="date" Nullable="false" />
+          <Property Name="hsluong" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__nhanvien__macv__3B75D760">
+          <End Role="chucvu" Type="Self.chucvu" Multiplicity="0..1" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chucvu">
+              <PropertyRef Name="macv" />
+            </Principal>
+            <Dependent Role="nhanvien">
+              <PropertyRef Name="macv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__nhanvien__mapb__3C69FB99">
+          <End Role="phongban" Type="Self.phongban" Multiplicity="0..1" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongban">
+              <PropertyRef Name="mapb" />
+            </Principal>
+            <Dependent Role="nhanvien">
+              <PropertyRef Name="mapb" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__quatrinhlu__manv__3F466844">
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1" />
+          <End Role="quatrinhluong" Type="Self.quatrinhluong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhanvien">
+              <PropertyRef Name="manv" />
+            </Principal>
+            <Dependent Role="quatrinhluong">
+              <PropertyRef Name="manv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QL_NHANVIENModelStoreContainer">
+          <EntitySet Name="chucvu" EntityType="Self.chucvu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="nhanvien" EntityType="Self.nhanvien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="phongban" EntityType="Self.phongban" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="quatrinhluong" EntityType="Self.quatrinhluong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__nhanvien__macv__3B75D760" Association="Self.FK__nhanvien__macv__3B75D760">
+            <End Role="chucvu" EntitySet="chucvu" />
+            <End Role="nhanvien" EntitySet="nhanvien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__nhanvien__mapb__3C69FB99" Association="Self.FK__nhanvien__mapb__3C69FB99">
+            <End Role="phongban" EntitySet="phongban" />
+            <End Role="nhanvien" EntitySet="nhanvien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__quatrinhlu__manv__3F466844" Association="Self.FK__quatrinhlu__manv__3F466844">
+            <End Role="nhanvien" EntitySet="nhanvien" />
+            <End Role="quatrinhluong" EntitySet="quatrinhluong" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QL_NHANVIENModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="chucvu">
+          <Key>
+            <PropertyRef Name="macv" />
+          </Key>
+          <Property Name="macv" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tencv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hsphucap" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="nhanviens" Relationship="Self.FK__nhanvien__macv__3B75D760" FromRole="chucvu" ToRole="nhanvien" />
+        </EntityType>
+        <EntityType Name="nhanvien">
+          <Key>
+            <PropertyRef Name="manv" />
+          </Key>
+          <Property Name="manv" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="holot" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ten" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngaysinh" Type="DateTime" Precision="0" />
+          <Property Name="gioitinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="macv" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="mapb" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="chucvu" Relationship="Self.FK__nhanvien__macv__3B75D760" FromRole="nhanvien" ToRole="chucvu" />
+          <NavigationProperty Name="phongban" Relationship="Self.FK__nhanvien__mapb__3C69FB99" FromRole="nhanvien" ToRole="phongban" />
+          <NavigationProperty Name="quatrinhluongs" Relationship="Self.FK__quatrinhlu__manv__3F466844" FromRole="nhanvien" ToRole="quatrinhluong" />
+        </EntityType>
+        <EntityType Name="phongban">
+          <Key>
+            <PropertyRef Name="mapb" />
+          </Key>
+          <Property Name="mapb" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tenpb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="nhanviens" Relationship="Self.FK__nhanvien__mapb__3C69FB99" FromRole="phongban" ToRole="nhanvien" />
+        </EntityType>
+        <EntityType Name="quatrinhluong">
+          <Key>
+            <PropertyRef Name="manv" />
+            <PropertyRef Name="ngaybd" />
+          </Key>
+          <Property Name="manv" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ngaybd" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="hsluong" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ghichu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="nhanvien" Relationship="Self.FK__quatrinhlu__manv__3F466844" FromRole="quatrinhluong" ToRole="nhanvien" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__nhanvien__macv__3B75D760">
+          <End Role="chucvu" Type="Self.chucvu" Multiplicity="0..1" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chucvu">
+              <PropertyRef Name="macv" />
+            </Principal>
+            <Dependent Role="nhanvien">
+              <PropertyRef Name="macv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__nhanvien__mapb__3C69FB99">
+          <End Role="phongban" Type="Self.phongban" Multiplicity="0..1" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongban">
+              <PropertyRef Name="mapb" />
+            </Principal>
+            <Dependent Role="nhanvien">
+              <PropertyRef Name="mapb" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__quatrinhlu__manv__3F466844">
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1" />
+          <End Role="quatrinhluong" Type="Self.quatrinhluong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhanvien">
+              <PropertyRef Name="manv" />
+            </Principal>
+            <Dependent Role="quatrinhluong">
+              <PropertyRef Name="manv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QL_NHANVIENEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="chucvus" EntityType="Self.chucvu" />
+          <EntitySet Name="nhanviens" EntityType="Self.nhanvien" />
+          <EntitySet Name="phongbans" EntityType="Self.phongban" />
+          <EntitySet Name="quatrinhluongs" EntityType="Self.quatrinhluong" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK__nhanvien__macv__3B75D760" Association="Self.FK__nhanvien__macv__3B75D760">
+            <End Role="chucvu" EntitySet="chucvus" />
+            <End Role="nhanvien" EntitySet="nhanviens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__nhanvien__mapb__3C69FB99" Association="Self.FK__nhanvien__mapb__3C69FB99">
+            <End Role="phongban" EntitySet="phongbans" />
+            <End Role="nhanvien" EntitySet="nhanviens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__quatrinhlu__manv__3F466844" Association="Self.FK__quatrinhlu__manv__3F466844">
+            <End Role="nhanvien" EntitySet="nhanviens" />
+            <End Role="quatrinhluong" EntitySet="quatrinhluongs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QL_NHANVIENModelStoreContainer" CdmEntityContainer="QL_NHANVIENEntities">
+          <EntitySetMapping Name="chucvus">
+            <EntityTypeMapping TypeName="QL_NHANVIENModel.chucvu">
+              <MappingFragment StoreEntitySet="chucvu">
+                <ScalarProperty Name="macv" ColumnName="macv" />
+                <ScalarProperty Name="tencv" ColumnName="tencv" />
+                <ScalarProperty Name="hsphucap" ColumnName="hsphucap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="nhanviens">
+            <EntityTypeMapping TypeName="QL_NHANVIENModel.nhanvien">
+              <MappingFragment StoreEntitySet="nhanvien">
+                <ScalarProperty Name="manv" ColumnName="manv" />
+                <ScalarProperty Name="holot" ColumnName="holot" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="macv" ColumnName="macv" />
+                <ScalarProperty Name="mapb" ColumnName="mapb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phongbans">
+            <EntityTypeMapping TypeName="QL_NHANVIENModel.phongban">
+              <MappingFragment StoreEntitySet="phongban">
+                <ScalarProperty Name="mapb" ColumnName="mapb" />
+                <ScalarProperty Name="tenpb" ColumnName="tenpb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="quatrinhluongs">
+            <EntityTypeMapping TypeName="QL_NHANVIENModel.quatrinhluong">
+              <MappingFragment StoreEntitySet="quatrinhluong">
+                <ScalarProperty Name="manv" ColumnName="manv" />
+                <ScalarProperty Name="ngaybd" ColumnName="ngaybd" />
+                <ScalarProperty Name="hsluong" ColumnName="hsluong" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QL_NHANVIENModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
